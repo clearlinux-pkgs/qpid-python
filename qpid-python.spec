@@ -4,7 +4,7 @@
 #
 Name     : qpid-python
 Version  : 0.32
-Release  : 10
+Release  : 11
 URL      : http://apache.arvixe.com/qpid/0.32/qpid-python-0.32.tar.gz
 Source0  : http://apache.arvixe.com/qpid/0.32/qpid-python-0.32.tar.gz
 Summary  : Python client implementation for Apache Qpid
