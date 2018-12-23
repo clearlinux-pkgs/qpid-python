@@ -1,5 +1,5 @@
 PKG_NAME := qpid-python
-URL := http://apache.arvixe.com/qpid/0.32/qpid-python-0.32.tar.gz
-ARCHIVES :=
+URL = https://mirrors.ocf.berkeley.edu/apache/qpid/python/1.37.0/qpid-python-1.37.0.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common

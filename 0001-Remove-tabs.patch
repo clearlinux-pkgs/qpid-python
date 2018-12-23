@@ -1,34 +1,35 @@
-From 94da4b1a83653db904ed6e3c27f94ad2afc9749b Mon Sep 17 00:00:00 2001
+From 3fc73db53d653ef1a3cd66e74b2a7c1b291452b1 Mon Sep 17 00:00:00 2001
 From: "Munoz, Obed N" <obed.n.munoz@intel.com>
 Date: Mon, 28 Sep 2015 13:12:59 -0500
 Subject: [PATCH] Remove tabs
 
 Signed-off-by: Munoz, Obed N <obed.n.munoz@intel.com>
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
 ---
  qpid/connection08.py | 10 +++++-----
  1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/qpid/connection08.py b/qpid/connection08.py
-index 1b79442..fdb7aee 100644
+index 54d7f88..33b6a8e 100644
 --- a/qpid/connection08.py
 +++ b/qpid/connection08.py
-@@ -162,11 +162,11 @@ class Connection:
+@@ -211,11 +211,11 @@ class Connection:
        frame.channel = channel
        end = c.decode_octet()
        if end != self.FRAME_END:
--	garbage = ""
--	while end != self.FRAME_END:
--	  garbage += chr(end)
--	  end = c.decode_octet()
--	raise "frame error: expected %r, got %r" % (self.FRAME_END, garbage)
+-	      garbage = ""
+-	      while end != self.FRAME_END:
+-	        garbage += chr(end)
+-	        end = c.decode_octet()
+-	      raise FramingError("frame error: expected %r, got %r" % (self.FRAME_END, garbage))
 +        garbage = ""
 +        while end != self.FRAME_END:
 +          garbage += chr(end)
 +          end = c.decode_octet()
-+        raise "frame error: expected %r, got %r" % (self.FRAME_END, garbage)
++        raise FramingError("frame error: expected %r, got %r" % (self.FRAME_END, garbage))
        return frame
      except EOF:
        # An EOF caught here can indicate an error decoding the frame,
 -- 
-2.5.3
+2.20.0
 
